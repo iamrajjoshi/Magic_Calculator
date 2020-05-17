@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "Calculator App",
+        debugShowCheckedModeBanner: false,
       home: new HomePage(),
     );
   }
@@ -59,9 +60,7 @@ class HomePageState extends State<HomePage>{
         inputtingNum = false;
       }
       else {
-        print(saveStr);
         input = saveStr;
-        print(input);
       }
     });
 
@@ -234,7 +233,6 @@ class HomePageState extends State<HomePage>{
           onPressed: () => f(),
           onLongPress: () {
             inputtingNum = true;
-            print("hey");
             _clear();
           },
         )
